@@ -122,24 +122,11 @@ These cover the lenient JSON parser (handling fenced/prose-wrapped model output)
 the output normalizer (nested vs. flattened model results, fallback repo, bonus
 metadata pass-through), and the completeness heuristic.
 
-End-to-end behavior against live GitHub requires the Chromium install and an API key;
+End-to-end behaviour against live GitHub requires the Chromium install and an API key.
 use `--show --screenshots ./shots` to observe and audit each decision.
 
 ---
 
-## A note on the expected output
-
-The task brief shows an example output of `v2026.1.29` (a January 2026 release). The
-openclaw project ships **calendar-versioned releases** (`vYYYY.M.D`) very frequently, so
-a live run today will return a *newer* latest release than the brief's example — this is
-expected drift, and is evidence the tool reads live page state rather than a hardcoded
-answer. The `author` should still resolve to the person who publishes the releases
-(`steipete`), not the `openclaw` organization; if you see the org name instead, sharpen
-the extraction wording in the goal (see `OBSERVATIONS.md`).
-
 ## Limitations
 
-See `OBSERVATIONS.md` for a full discussion. In short: the approach trades the
-brittleness of selectors for the variance of a probabilistic model, costs a few cents
-and several seconds per run, and depends on the target element being visible in the
-viewport (handled via scrolling).
+See `Observation Document` for a full discussion. 
